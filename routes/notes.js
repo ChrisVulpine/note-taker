@@ -22,7 +22,7 @@ router.use(express.json());
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 //=======================================================================================================================================
 
-router.get('/', (req, res) => {
+router.get('/api/notes', (req, res) => {
   fs.readFile(db, 'utf8', (err, data) => {
 
     if (err) {
@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
         // (look into npm packages that could do this for you).
 //=======================================================================================================================================
 
-router.post('/', (req, res) => {
+router.post('/api/notes', (req, res) => {
   const newNote = req.body;
   newNote.id = uuidv4();
 
