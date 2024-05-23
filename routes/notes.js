@@ -12,6 +12,7 @@ const router = require('express').Router();
 const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+
 const db = path.join(__dirname, '../db/db.json');
 
 // Middleware to parse JSON bodies
@@ -22,7 +23,7 @@ router.use(express.json());
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 //=======================================================================================================================================
 
-router.get('/api/notes', (req, res) => {
+router.get('/', (req, res) => {
   fs.readFile(db, 'utf8', (err, data) => {
 
     if (err) {
@@ -49,7 +50,7 @@ router.get('/api/notes', (req, res) => {
         // (look into npm packages that could do this for you).
 //=======================================================================================================================================
 
-router.post('/api/notes', (req, res) => {
+router.post('/', (req, res) => {
   const newNote = req.body;
   newNote.id = uuidv4();
 
