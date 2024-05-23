@@ -5,8 +5,8 @@ const router = require('express').Router();
 const htmlRouter = require('./html');
 const notesRouter = require('./notes');
 
-
-router.use('/', htmlRouter);
 router.use('/api/notes', notesRouter);
+router.use('/', htmlRouter);
+
 
 module.exports = router; 
