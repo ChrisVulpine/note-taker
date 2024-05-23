@@ -6,7 +6,7 @@ const htmlRouter = require('./html');
 const notesRouter = require('./notes');
 
 
-router.use('/home', htmlRouter);
-router.use('/notes', notesRouter);
+router.use('/', htmlRouter);
+router.use('/api/notes', notesRouter);
 
 module.exports = router; 
