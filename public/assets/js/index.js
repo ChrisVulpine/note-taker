@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
 let noteForm;
 let noteTitle;
 let noteText;
@@ -35,6 +36,10 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json'
     }
+  }).then(response => {
+    // Log the response before parsing it as JSON
+    console.log('Response from server:', response);
+    return response.json();
   });
 
 const saveNote = (note) =>
