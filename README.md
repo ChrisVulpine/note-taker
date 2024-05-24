@@ -26,11 +26,11 @@ This project is covered under the [MIT](https://opensource.org/licenses/MIT) lic
 ## Credits
 
 * Routing in Node - https://www.geeksforgeeks.org/routing-in-node-js/#
-<br>
+
 * Express Routing - https://expressjs.com/en/guide/routing.html
-<br>
+
 * chatGPT - https://chatgpt.com/
-<br>
+
 * General Reference - https://www.w3schools.com/
 
 
